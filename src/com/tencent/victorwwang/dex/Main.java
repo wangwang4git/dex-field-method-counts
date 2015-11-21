@@ -290,8 +290,8 @@ public class Main {
 
     private void usage() {
         System.err.print(
-                "DEX per-package/class method counts v1.0\n" +
-                        "Usage: dex-method-counts [options] <file.{dex,apk,jar,directory}> ...\n" +
+                "DEX per-package/class field/method counts v1.0\n" +
+                        "Usage: dex-field-method-counts [options] <file.{dex,apk,jar,directory}> ...\n" +
                         "Options:\n" +
                         "  --diff (need two <file.{dex,apk,jar}>)\n" +
                         "  --include-classes\n" +
