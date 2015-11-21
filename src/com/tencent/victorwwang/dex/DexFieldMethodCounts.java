@@ -71,7 +71,7 @@ public class DexFieldMethodCounts {
 //            if (first != intPair.first) return false;
 //            return second == intPair.second;
             if (Math.abs(first - intPair.first) > 2)  return false;
-            return Math.abs(first - intPair.first) <= 2;
+            return Math.abs(second - intPair.second) <= 2;
 
         }
 
