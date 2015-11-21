@@ -51,12 +51,12 @@ Processing ../project/fts/Android_6.1.0_XXXX/bin/XXXX_5.0.0_Android.apk
 Overall field count: 178723
 Overall method count: 167590
 fields				methods				package/class name
-    0|50			   74|569			android.animation
-    2|52			  541|5548			android.content
-   82|582			  126|5125			android.content.pm
-    0|50			   95|599			android.database
-   16|514			   87|585			android.hardware
-   12|512			  280|5278			android.media
+    0|0			   74|69			android.animation
+    2|2			  541|548			android.content
+   82|82			  126|125			android.content.pm
+    0|0			   95|99			android.database
+   16|14			   87|85			android.hardware
+   12|12			  280|278			android.media
 ...
 Overall fields diff count: 396
 Overall methods diff count: 728
