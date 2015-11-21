@@ -44,10 +44,10 @@ fields		methods		package/class name
 * **--diff**: 支持两个apk输入，筛选输出两个apk之间有`fields`或者`methods`变动的package，输入如下：
 
 ```
-Processing ../project/master/trunk/bin/QQ_5.0.0_Android.apk
+Processing ../project/master/trunk/bin/XXXX_5.0.0_Android.apk
 Overall field count: 178327
 Overall method count: 166862
-Processing ../project/fts/Android_6.1.0_Base_FullTextSearch/bin/QQ_5.0.0_Android.apk
+Processing ../project/fts/Android_6.1.0_XXXX/bin/XXXX_5.0.0_Android.apk
 Overall field count: 178723
 Overall method count: 167590
 fields				methods				package/class name
