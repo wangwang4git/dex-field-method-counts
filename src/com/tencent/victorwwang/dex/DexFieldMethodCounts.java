@@ -53,6 +53,9 @@ public class DexFieldMethodCounts {
         public int first;
         public int second;
 
+        public IntPair() {
+        }
+
         public IntPair(int first, int second) {
             this.first = first;
             this.second = second;
@@ -65,8 +68,10 @@ public class DexFieldMethodCounts {
 
             IntPair intPair = (IntPair) o;
 
-            if (first != intPair.first) return false;
-            return second == intPair.second;
+//            if (first != intPair.first) return false;
+//            return second == intPair.second;
+            if (Math.abs(first - intPair.first) > 2)  return false;
+            return Math.abs(first - intPair.first) <= 2;
 
         }
 
@@ -180,6 +185,21 @@ public class DexFieldMethodCounts {
         for (Map.Entry<String, IntHolder> e : packageMethodCount.entrySet()) {
             String packageName = e.getKey();
             packageCount.put(packageName, new IntPair(0, e.getValue().value));
+        }
+    }
+
+    public void putPackageCount(Map<String, IntPair> map) {
+        for (Map.Entry<String, IntPair> e : map.entrySet()) {
+            String packageName = e.getKey();
+
+            if (packageCount.get(packageName) == null) {
+                packageCount.put(packageName, e.getValue());
+            } else {
+                IntPair pair = new IntPair();
+                pair.first = e.getValue().first + packageCount.get(packageName).first;
+                pair.second = e.getValue().second + packageCount.get(packageName).second;
+                packageCount.put(packageName, pair);
+            }
         }
     }
 

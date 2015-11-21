@@ -34,13 +34,13 @@ public class Main {
     public static class IntFour {
         public int first;
         public int second;
-        public int threed;
+        public int three;
         public int four;
 
-        public IntFour(int first, int second, int threed, int four) {
+        public IntFour(int first, int second, int three, int four) {
             this.first = first;
             this.second = second;
-            this.threed = threed;
+            this.three = three;
             this.four = four;
         }
     }
@@ -74,7 +74,7 @@ public class Main {
                         }
                         counts.calcPackageCount();
 
-                        countDiff[i].packageCount.putAll(counts.packageCount);
+                        countDiff[i].putPackageCount(counts.packageCount);
                         countDiff[i].overallFieldCount += counts.getOverallFieldCount();
                         countDiff[i].overallMethodCount = counts.getOverallMethodCount();
                     }
@@ -119,8 +119,8 @@ public class Main {
                         IntFour pair = e.getValue();
 
                         fieldsDiff += -pair.first + pair.second;
-                        methodsDiff += -pair.threed + pair.four;
-                        System.out.printf("%5s|5%s\t\t\t%5s|5%s\t\t\t%s\n", pair.first, pair.second, pair.threed, pair.four, packageName);
+                        methodsDiff += -pair.three + pair.four;
+                        System.out.printf("%5s|%-5s\t\t\t%5s|%-5s\t\t\t%s\n", pair.first, pair.second, pair.three, pair.four, packageName);
                     }
 
                     System.out.println("Overall fields diff count: " + fieldsDiff);
