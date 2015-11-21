@@ -1,0 +1,29 @@
+group 'con.tencent.virtorwwang'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'application'
+
+mainClassName = "com.tencent.victorwwang.dex.Main"
+
+repositories {
+    mavenCentral()
+}
+
+// Match existing source structure
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+}
+
+jar {
+    // Redirect output to match launcher script
+    destinationDir = file('build/jar')
+    manifest {
+        attributes("Main-Class": mainClassName)
+    }
+}
+
+
